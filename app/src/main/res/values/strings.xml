@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Challenge2</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="pick_image">PICK IMAGE</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="agreemant_license">These is our license agreement: You can share this app anywhere that you want and use it however you want. Just remember to enjoy.</string>
+    <string name="other">Other</string>
+    <string name="woman">Woman</string>
+    <string name="man">Man</string>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/avatarRelLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="@string/pick_image" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/registerRelLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatarRelLay">
+
+        <RelativeLayout
+            android:id="@+id/EditTxtRelLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                android:id="@+id/editTxtName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:hint="@string/name"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTxtEmail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtName"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTxtPassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtEmail"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editTxtRePassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTxtPassword"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/re_enter_password"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/EditTxtRelLay">
+
+            <TextView
+                android:id="@+id/txtLicense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agreemant_license" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLicense"
+                android:text="I agree" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/man" />
+
+            <RadioButton
+                android:id="@+id/rbWoman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/woman" />
+
+            <RadioButton
+                android:id="@+id/rbOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/other" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txtCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Country: " />
+
+            <Spinner
+                android:id="@+id/spinnerCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/txtCountry" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerRelLay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Register" />
+
+
+</RelativeLayout>
