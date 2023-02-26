@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/parent">
 
     <RelativeLayout
         android:id="@+id/avatarRelLay"
@@ -38,16 +39,36 @@
         <RelativeLayout
             android:id="@+id/EditTxtRelLay"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp">
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Enter name"
+                android:textColor="@color/red"
+                android:id="@+id/txtWarningName"
+                android:visibility="invisible"/>
             <EditText
                 android:id="@+id/editTxtName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:hint="@string/name"
-                android:inputType="text" />
+                android:inputType="text"
+                android:layout_below="@+id/txtWarningName"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  -"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Enter email"
+                android:textColor="@color/red"
+                android:id="@+id/txtWarningEmail"
+                android:layout_below="@+id/editTxtName"
+                android:visibility="invisible"
+                />
 
             <EditText
                 android:id="@+id/editTxtEmail"
@@ -58,7 +79,6 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress" />
-
             <EditText
                 android:id="@+id/editTxtPassword"
                 android:layout_width="200dp"
@@ -97,7 +117,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtLicense"
-                android:text="I agree" />
+                android:text="I agree"
+                android:id="@+id/checkboxAgreemant"/>
         </RelativeLayout>
 
         <RadioGroup
